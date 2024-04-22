@@ -18,7 +18,9 @@
                             </tr>
                         </thead>
                         {{-- Task: add the loop here to show users, or the row "No content" --}}
-                           @forelse($users as $user)                       
+                           @forelse($users as $user)   
+                         @empty
+                           No Content
                         <tbody>      
                             
                        
@@ -29,8 +31,7 @@
                                 <td>{{ $user->created_at }}</td>
                             </tr>
                           
-                           @empty
-                           No Content
+                          
                             
                      
                         </tbody>
